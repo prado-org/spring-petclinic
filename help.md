@@ -32,7 +32,9 @@
 
 
 
-como acessar o banco de dados h2
+## Como acessar o banco de dados h2
+
+```
 como adicionar a propriedade spring.h2.console.enabled=true
 http://localhost:8080/h2-console
     Pegar o a url jdbc no log
@@ -41,3 +43,4 @@ http://localhost:8080/h2-console
 Quando parar a aplicação, a coluna será removida porque o banco de dados é em memória
     adicionar no arquivo schema.sql - ALTER TABLE owners ADD COLUMN email VARCHAR(255);
     adicionar no arquivo data.sql - adicionar o email para os owners
+```
