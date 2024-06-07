@@ -6,6 +6,7 @@
 ./mvnw compile
 
 ./mvnw spring-boot:run
+You can then access the Petclinic at http://localhost:8080
 
 ./mvnw spring-javaformat:apply
 
