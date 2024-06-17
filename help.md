@@ -70,6 +70,11 @@ Adicione o campo email
 
 -------------------------------------------------------------------------------------------
 
+@workspace atualizar os testes unitarios do OwnerController e adicionar o campo email
+
+-------------------------------------------------------------------------------------------
+
+
 como acessar o banco de dados h2
 como adicionar a propriedade spring.h2.console.enabled=true
 http://localhost:8080/h2-console
