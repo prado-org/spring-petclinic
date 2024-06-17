@@ -13,6 +13,8 @@
 
 ## Prompt para o Copilot
 
+@workspace em qual arquivo eu posso trocar a imagem da página welcome
+
 @workspace como adicionar o campo email ao model da tela Add Owner?
     Owner.java - src\main\java\org\springframework\samples\petclinic\owner\Owner.java
 
@@ -28,6 +30,7 @@
 		this.email = email;
 	}
 
+@workspace como adicionar o campo email na tela de cadastro de owner?
 
 @workspace onde está o arquivo createOrUpdateOwnerForm.html
     createOrUpdateOwnerForm.html - src\main\resources\templates\owners\createOrUpdateOwnerForm.html
@@ -48,12 +51,13 @@ Executar esse commando -> ./mvnw spring-javaformat:apply
 
 @workspace em qual arquivo fica essas configurações spring.profiles.active
 
-@workspace qual arquivo eu devo adicionar a alteração do banco de dados adicionando o campo email?
+@workspace qual arquivo eu devo adicionar a alteração do banco de dados adicionando o campo email para o banco de dados h2?
     no arquivo data.sql, selecionar o insert do owner e adicionar o email
     ALTER TABLE owners ADD COLUMN email VARCHAR(255);
 
+@workspace em qual arquivo devo alterar os inserts para a tabela owners para o banco h2?
 
-gerar emails de exemplo, e adicione no script de insert
+altere os inserts adicionando o campo "email". Gere exemplos para serem usados
 	src\main\resources\db\h2\data.sql
 
 
