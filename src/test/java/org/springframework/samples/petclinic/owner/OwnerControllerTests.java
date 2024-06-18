@@ -20,6 +20,7 @@ import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.hasProperty;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.eq;
@@ -75,6 +76,7 @@ class OwnerControllerTests {
 		george.setAddress("110 W. Liberty St.");
 		george.setCity("Madison");
 		george.setTelephone("6085551023");
+		george.setEmail("george.franklin@email.com");
 		Pet max = new Pet();
 		PetType dog = new PetType();
 		dog.setName("dog");
@@ -85,6 +87,20 @@ class OwnerControllerTests {
 		max.setId(1);
 		return george;
 	};
+
+	@Test
+	void testNewOwnerHasEmail() {
+		Owner newOwner = new Owner();
+		newOwner.setId(TEST_OWNER_ID);
+		newOwner.setFirstName("George");
+		newOwner.setLastName("Franklin");
+		newOwner.setAddress("110 W. Liberty St.");
+		newOwner.setCity("Madison");
+		newOwner.setTelephone("6085551023");
+		newOwner.setEmail("george.franklin@email.com");
+		
+		assertEquals("george.franklin@email.com", newOwner.getEmail(), "Owner email should be set correctly");
+	}
 
 	@BeforeEach
 	void setup() {

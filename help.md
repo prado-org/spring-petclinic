@@ -12,6 +12,7 @@
 ```
 
 ## Prompt para o Copilot
+Resuma essa issue
 
 @workspace em qual arquivo eu posso trocar a imagem da página welcome
 

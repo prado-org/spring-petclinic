@@ -64,6 +64,18 @@ public class Owner extends Person {
 	@OrderBy("name")
 	private List<Pet> pets = new ArrayList<>();
 
+	@Column(name = "email")
+	@NotBlank
+	private String email;
+
+	public String getEmail() {
+		return this.email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	public String getAddress() {
 		return this.address;
 	}
