@@ -31,7 +31,11 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.OrderBy;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Digits;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+
+import org.springframework.validation.annotation.Validated;
+import org.springframework.data.annotation.Id;
 
 /**
  * Simple JavaBean domain object representing an owner.
@@ -96,6 +100,19 @@ public class Owner extends Person {
 		if (pet.isNew()) {
 			getPets().add(pet);
 		}
+	}
+
+	@Column(name = "email")
+	@NotBlank(message = "Email não pode estar em branco")
+	@Email(message = "Email deve ser válido")
+	private String email;
+
+	public String getEmail() {
+		return this.email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	/**
