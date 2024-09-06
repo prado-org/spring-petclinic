@@ -53,3 +53,5 @@ CREATE TABLE IF NOT EXISTS visits (
   description VARCHAR(255),
   FOREIGN KEY (pet_id) REFERENCES pets(id)
 ) engine=InnoDB;
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(255);
