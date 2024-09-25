@@ -32,6 +32,7 @@ import jakarta.persistence.OrderBy;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Email;
 
 /**
  * Simple JavaBean domain object representing an owner.
@@ -86,6 +87,19 @@ public class Owner extends Person {
 
 	public void setTelephone(String telephone) {
 		this.telephone = telephone;
+	}
+
+	@Column(name = "email")
+	@NotBlank(message = "Email is required")
+	@Email(message = "Email should be valid")
+	private String email;
+
+	public String getEmail() {
+		return this.email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public List<Pet> getPets() {
