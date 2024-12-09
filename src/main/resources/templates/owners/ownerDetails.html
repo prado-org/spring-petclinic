@@ -36,6 +36,14 @@
         <th>Telephone</th>
         <td th:text="*{telephone}"></td>
       </tr>
+      <tr>
+        <th>Email</th>
+        <td>george.franklin@outlook.com</td>
+      </tr>
+      <tr>
+        <th>Photo</th>
+        <td><img src="../static/resources/images/photo.png" th:src="@{/resources/images/photo.png}"/></td>
+      </tr>
     </table>
   
     <a th:href="@{__${owner.id}__/edit}" class="btn btn-primary">Edit
