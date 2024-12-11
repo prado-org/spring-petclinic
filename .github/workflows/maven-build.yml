@@ -1,7 +1,4 @@
-# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
-# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
-
-name: Java CI with Maven
+name: Maven Build
 
 on:
   push:
@@ -11,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -24,7 +20,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: ${{matrix.java}}
-          distribution: 'adopt'
+          distribution: 'oracle'
           cache: maven
       
       - name: Spring Java Format
