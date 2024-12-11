@@ -29,9 +29,9 @@ jobs:
         path: |
           ~/.gradle/caches
           ~/.gradle/wrapper
-        key: ${{ runner.os }}-gradle
+        key: ${{ runner.os }}-gradle-${{ github.repository }}
         restore-keys: |
-          ${{ runner.os }}-gradle
+          ${{ runner.os }}-gradle-${{ github.repository }}
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
