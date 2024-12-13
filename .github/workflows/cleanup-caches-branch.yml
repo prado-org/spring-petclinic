@@ -6,11 +6,17 @@ on:
   pull_request:
     types:
       - closed
+  workflow_dispatch:
 
 jobs:
   cleanup:
     runs-on: ubuntu-latest
     steps:
+      - name: List Cache
+        run: |
+          echo "Listing list of cache"
+          gh cache list --json 'id,key,version,createdAt,lastAccessedAt,sizeInBytes'
+
       - name: Cleanup
         run: |
           echo "Fetching list of cache key"
