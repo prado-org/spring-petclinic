@@ -1,4 +1,4 @@
-name: cleanup-caches-branch
+name: Cleanup Caches Branch
 
 run-name: cleanup caches ${{ github.repository }} by a branch
 
