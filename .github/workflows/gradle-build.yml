@@ -22,17 +22,7 @@ jobs:
       with:
         java-version: '17'
         distribution: 'oracle'
-    
-    #- name: Cache Gradle packages
-    #  uses: actions/cache@v4
-    #  with:
-    #    path: |
-    #      ~/.gradle/caches
-    #      ~/.gradle/wrapper
-    #    key: ${{ runner.os }}-gradle-${{ github.repository }}-${{ github.ref }}
-    #    restore-keys: |
-    #      ${{ runner.os }}-gradle-${{ github.repository }}-
-    
+
     - uses: actions/cache@v4
       with:
         path: |
