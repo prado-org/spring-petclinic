@@ -23,7 +23,8 @@ jobs:
         java-version: '17'
         distribution: 'oracle'
 
-    - uses: actions/cache@v4
+    - name: Cache dependencies
+      uses: actions/cache@v4
       with:
         path: |
           ~/.gradle/caches
@@ -31,7 +32,6 @@ jobs:
         key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
         restore-keys: |
           ${{ runner.os }}-gradle-
-
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
