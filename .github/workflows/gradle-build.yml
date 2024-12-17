@@ -23,7 +23,7 @@ jobs:
         java-version: '17'
         distribution: 'oracle'
 
-    - name: Cache dependencies
+    - name: Cache Gradle dependencies
       uses: actions/cache@v4
       with:
         path: |
