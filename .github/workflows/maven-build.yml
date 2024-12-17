@@ -22,7 +22,7 @@ jobs:
         with:
           java-version: ${{matrix.java}}
           distribution: 'oracle'
-          cache: maven
+          #cache: maven
       
       - name: Cache Maven dependencies
         uses: actions/cache@v4
