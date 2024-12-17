@@ -39,7 +39,7 @@ jobs:
           for cacheKey in $cacheKeysForPR
           do
               echo $cacheKey
-              #gh cache delete $cacheKey
+              gh cache delete $cacheKey
           done
           echo "Done"
         env:
