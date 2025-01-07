@@ -18,4 +18,4 @@ jobs:
         distribution: 'oracle'
 
     - name: Gradle Build Setup
-      uses: gradle/gradle-build-action@v2.4.1
+      uses: gradle/gradle-build-action@v2.4.2
